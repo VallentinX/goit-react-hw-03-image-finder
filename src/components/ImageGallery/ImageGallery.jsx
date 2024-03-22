@@ -10,7 +10,7 @@ const ImageGallery = function ({ images, onImageClick }) {
   return (
     <ul>
       {images.map((image, i) => {
-        if (uniqueIds.has(image.id)) return;
+        if (uniqueIds.has(image.id)) return null;
 
         uniqueIds.add(image.id);
 
