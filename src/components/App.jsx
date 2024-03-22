@@ -33,7 +33,7 @@ class App extends Component {
     });
   };
 
-  handleInitLoad = () => {
+  handleInitialLoad = () => {
     this.getImgs();
   };
 
@@ -51,9 +51,9 @@ class App extends Component {
       }),
       () => {
         if (lastSearch) {
-          this.fetchImages(lastSearch, this.state.page);
+          this.getImgs(lastSearch, this.state.page);
         } else {
-          this.handleInitLoad();
+          this.handleInitialLoad();
         }
       }
     );
@@ -77,7 +77,7 @@ class App extends Component {
     if (this.state.page === 1 && this.state.query) {
       this.getImgs();
     }
-    this.handleInitLoad();
+    this.handleInitialLoad();
   }
 
   componentDidUpdate(_, prevState) {
